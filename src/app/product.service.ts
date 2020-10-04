@@ -41,4 +41,4 @@ export class ProductListComponent implements OnInit   {
       getProducts(): Observable<Product[]>    {
         return this._http.get(this._productsUrl).map(response => <Product[]> response.json());
       }
-    }
+
