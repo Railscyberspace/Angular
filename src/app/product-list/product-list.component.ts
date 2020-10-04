@@ -20,4 +20,11 @@ export class ProductListComponent implements OnInit {
 
   constructor(private _productService: ProductService) {}
 
-  
+  // tslint:disable-next-line:member-ordering
+
+  ngOnInit() {
+    this._productService
+      .getProducts()
+      .subscribe((response) => (this.products = response));
+  }
+}
