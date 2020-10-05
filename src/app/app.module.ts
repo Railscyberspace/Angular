@@ -48,11 +48,11 @@ export class ProductService {
 // tslint:disable-next-line:quotemark
 const appRoutes: Routes = [
   // tslint:disable-next-line:quotemark
-  { path: "products"; component: ProductListComponent },
+  { path: "products", component: ProductListComponent },
   // tslint:disable-next-line:quotemark
-  { path: "product/:id"; component: ProductPageComponent },
+  { path: "product/:id", component: ProductPageComponent },
   // tslint:disable-next-line:quotemark
-  { path: "",redirectTo: "products", pathMatch: "full" }
+  { path: "", redirectTo: "products", pathMatch: "full" },
 ];
 @NgModule({
   declarations: [
