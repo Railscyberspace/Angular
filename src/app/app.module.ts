@@ -47,6 +47,10 @@ export class ProductService
     );
   }
 }
+
+
+
+import { RouterModule, Routes } from '@angular/router';
 // tslint:disable-next-line:quotemark
 const appRoutes: Routes = [
   // tslint:disable-next-line:quotemark
@@ -58,7 +62,7 @@ const appRoutes: Routes = [
 ];
 
 // tslint:disable-next-line:quotemark
-import { RouterModule, Routes } from '@angular/router';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,7 +75,7 @@ import { RouterModule, Routes } from '@angular/router';
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [ProductService],
   bootstrap: [AppComponent],
