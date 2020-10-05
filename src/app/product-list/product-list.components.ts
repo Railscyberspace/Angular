@@ -19,9 +19,6 @@ export class ProductListComponent implements OnInit {
   products: Product[];
 
   constructor(private _productService: ProductService) {}
-
-  // tslint:disable-next-line:member-ordering
-
   ngOnInit() {
     this._productService
       .getProducts()
