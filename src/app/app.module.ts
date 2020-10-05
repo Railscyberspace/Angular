@@ -46,11 +46,13 @@ export class ProductService {
   }
 }
 // tslint:disable-next-line:quotemark
-const appRoutes: [{ path: "products"; component: ProductListComponent }
-                  // tslint:disable-next-line:quotemark
-                  { path: "product/:id", component: ProductPageComponent }
-                  // tslint:disable-next-line:quotemark
-                  { path: '', redirctTo: "products", pathmatch: 'full'}
+const appRoutes: Routes = [
+  // tslint:disable-next-line:quotemark
+  { path: "products"; component: ProductListComponent },
+  // tslint:disable-next-line:quotemark
+  { path: "product/:id"; component: ProductPageComponent },
+  // tslint:disable-next-line:quotemark
+  { path: "",redirectTo: "products", pathMatch: "full" }
 ];
 @NgModule({
   declarations: [
@@ -60,10 +62,13 @@ const appRoutes: [{ path: "products"; component: ProductListComponent }
     ProductTracklistingComponent,
     ProductListComponent,
   ],
-  imports: [BrowserModule, FormsModule, HttpModule,
-    RouterModule.forRoot(appRoutes)
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [ProductService],
-  bootstrap: [AppComponent, ]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
