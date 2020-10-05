@@ -30,15 +30,17 @@ import { ProductTracklistingComponent } from "./product-tracklisting/product-tra
 // tslint:disable-next-line:quotemark
 import { ProductListComponent } from "./product-list/product-list.component";
 // tslint:disable-next-line:quotemark
-import { RouterModule, Routes } from "@angular/router";
+
 // tslint:disable-next-line:quotemark
 @Injectable()
-export class ProductService {
+export class ProductService
+{
   // tslint:disable-next-line:quotemark
   private _albumUrl = "...assets/album.json";
-  constructor(private _http: Http) {}
+  constructor(private _http: Http) { }
 
-  getAlbum(id: number) {
+  getAlbum(id: number)
+  {
     return this._http.get(this._albumUrl).map(
       // tslint:disable-next-line:no-shadowed-variable
       (Response) => Response.json()
@@ -54,6 +56,9 @@ const appRoutes: Routes = [
   // tslint:disable-next-line:quotemark
   { path: "", redirectTo: "products", pathMatch: "full" },
 ];
+
+// tslint:disable-next-line:quotemark
+import { RouterModule, Routes } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,4 +76,4 @@ const appRoutes: Routes = [
   providers: [ProductService],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
