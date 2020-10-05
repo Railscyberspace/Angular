@@ -51,18 +51,12 @@ export class ProductService
 
 
 import { RouterModule, Routes } from '@angular/router';
-// tslint:disable-next-line:quotemark
+
 const appRoutes: Routes = [
-  // tslint:disable-next-line:quotemark
-  { path: "products", component: ProductListComponent },
-  // tslint:disable-next-line:quotemark
-  { path: "product/:id", component: ProductPageComponent },
-  // tslint:disable-next-line:quotemark
-  { path: "", redirectTo: "products", pathMatch: "full" },
+  { path: 'products', component: ProductListComponent },
+  { path: 'product/:id', component: ProductPageComponent },
+  { path: '', redirectTo: 'products', pathMatch: 'full' },
 ];
-
-// tslint:disable-next-line:quotemark
-
 @NgModule({
   declarations: [
     AppComponent,
