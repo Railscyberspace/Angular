@@ -15,16 +15,16 @@ import { ProductService } from "../product.service";
   // tslint:disable-next-line:quotemark
   styleUrls: ["./product-list.component.css"],
 })
-export class ProductListComponent implements OnInit {
+export class ProductListComponent implements OnInit
+{
   products: Product[];
 
-  constructor(private _productService: ProductService) {}
+  constructor(private _productService: ProductService) { }
 
   // tslint:disable-next-line:member-ordering
 
-  ngOnInit() {
-    this._productService
-      .getProducts()
-      .subscribe((response) => (this.products = response));
-  }
+
+}
+
+
 }

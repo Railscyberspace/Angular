@@ -21,10 +21,9 @@ export class ProductListComponent implements OnInit   {
 
   ngOnInit()   {
     this._productService.getAlbum(1).subscribe(response => this.albumInfo = response);
-
-    @Injectable()
     // tslint:disable-next-line: no-shadowed-variable
     export class ProductService    {
+
       private _albumUrl = '../assets/album.json';
 
       private _productsUrl = '../assets/products.json';
@@ -42,3 +41,4 @@ export class ProductListComponent implements OnInit   {
         return this._http.get(this._productsUrl).map(response => <Product[]> response.json());
       }
 
+    }
