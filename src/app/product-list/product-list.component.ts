@@ -24,7 +24,8 @@ export class ProductListComponent implements OnInit
   // tslint:disable-next-line:member-ordering
 
 
-}
-
+ngOnInit() {
+    this._productService.getProducts().subscribe(response => this.products = response);
+  }
 
 }
